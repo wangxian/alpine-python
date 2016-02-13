@@ -3,3 +3,4 @@
 .dockerignore
 LICENSE
 README.md
+*.pyc
