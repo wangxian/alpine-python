@@ -8,4 +8,4 @@ RUN apk add --update python3 py3-pip && rm -rf /var/cache/apk/* && ln -sfv /usr/
 
 EXPOSE 8000
 
-CMD ["/bin/sh", "/startup.sh"]
+CMD ["/bin/sh", "/app/startup.sh"]
