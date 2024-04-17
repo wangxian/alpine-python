@@ -9,5 +9,6 @@ docker build -t wangxian/alpine-python .
 # cli
 docker run -it --rm wangxian/alpine-python python3 -V
 
-docker run -it --rm -p 8888:5000 wangxian/alpine-python
+# Web server | auto run /bin/sh /app/startup.sh
+docker run -it --rm -p 8000:8000 wangxian/alpine-python
 ```
