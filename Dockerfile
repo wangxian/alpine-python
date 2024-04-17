@@ -1,12 +1,11 @@
-FROM alpine:latest
+FROM alpine:3.16
 MAINTAINER WangXian <xian366@126.com>
 
 WORKDIR /app
-COPY . .
+COPY startup.sh .
 
-RUN mkdir ~/.pip && mv pip.conf ~/.pip
-RUN apk add --update curl python py-pip && rm /var/cache/apk/*
-RUN /usr/bin/easy_install-2.7 -U pip
+RUN apk add --update python && rm -rf /var/cache/apk/* && pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-EXPOSE 5000
-CMD ["python", "run.py"]
+EXPOSE 8000
+
+CMD ["/bin/sh", "/startup.sh"]
