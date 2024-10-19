@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3.20
 LABEL maintainer="WangXian <xian366@126.com>"
 
 WORKDIR /app
