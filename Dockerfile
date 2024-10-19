@@ -1,5 +1,5 @@
 FROM alpine:3.19
-MAINTAINER WangXian <xian366@126.com>
+LABEL maintainer="WangXian <xian366@126.com>"
 
 WORKDIR /app
 COPY startup.sh .
